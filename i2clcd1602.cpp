@@ -41,7 +41,6 @@ void I2CLCD::write4(uint8_t data) {
     Wire.beginTransmission(addr);
     Wire.write((int) ((data & (~4)) | backlight));
     Wire.endTransmission();
-    delayMicroseconds(50);
 }
 
 void I2CLCD::reset() {
